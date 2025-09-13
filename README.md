@@ -4,7 +4,7 @@ Production-ready slash commands for [Claude Code](https://docs.anthropic.com/en/
 
 ## Overview
 
-This repository contains **52 production-ready slash commands** designed to enhance your development workflow with Claude Code. Commands are organized into two primary categories:
+This repository contains **56 production-ready slash commands** designed to enhance your development workflow with Claude Code. Commands are organized into two primary categories:
 
 - **Workflows**: Multi-agent orchestration for complex, multi-step tasks
 - **Tools**: Single-purpose utilities for specific operations
@@ -39,7 +39,7 @@ cp workflows/*.md .
 
 ## Command Categories
 
-### Workflows (14 commands)
+### Workflows (15 commands)
 
 Workflows orchestrate multiple specialized agents to handle complex, multi-domain tasks. They analyze requirements, delegate to appropriate specialists, and coordinate results.
 
@@ -54,6 +54,7 @@ Workflows orchestrate multiple specialized agents to handle complex, multi-domai
 - **legacy-modernize** - Legacy codebase modernization with specialized refactoring agents
 - **ml-pipeline** - ML pipeline creation with data and ML engineering specialists
 - **multi-platform** - Cross-platform application development with coordinated agents
+- **tdd-cycle** - Complete Test-Driven Development workflow with red-green-refactor cycles
 - **workflow-automate** - CI/CD, monitoring, and deployment automation
 
 #### Advanced Orchestration
@@ -63,7 +64,7 @@ Workflows orchestrate multiple specialized agents to handle complex, multi-domai
 - **performance-optimization** - End-to-end optimization with performance specialists
 - **incident-response** - Production incident resolution with operations specialists
 
-### Tools (38 commands)
+### Tools (41 commands)
 
 Tools provide focused, single-purpose functionality for specific development tasks.
 
@@ -97,6 +98,11 @@ Tools provide focused, single-purpose functionality for specific development tas
 - **api-mock** - Realistic API mocks for development and testing
 - **api-scaffold** - Production-ready API endpoints with complete implementation
 - **test-harness** - Comprehensive test suites with framework detection
+
+#### Test-Driven Development
+- **tdd-red** - Write failing tests first following TDD methodology
+- **tdd-green** - Implement minimal code to make tests pass
+- **tdd-refactor** - Improve code quality while maintaining test coverage
 
 #### Security & Compliance
 - **accessibility-audit** - Accessibility testing and remediation
@@ -143,6 +149,9 @@ Tools provide focused, single-purpose functionality for specific development tas
 
 # Scaffold specific API endpoints
 /tools:api-scaffold user profile CRUD with avatar upload
+
+# Or use Test-Driven Development approach
+/workflows:tdd-cycle Implement user registration with email verification
 ```
 
 #### Debugging & Problem Resolution
@@ -173,6 +182,31 @@ Tools provide focused, single-purpose functionality for specific development tas
 
 # Create Kubernetes manifests
 /tools:k8s-manifest Production deployment with auto-scaling
+```
+
+### Test-Driven Development Workflow
+
+#### Complete TDD Cycle
+```bash
+# Full TDD workflow with orchestration
+/workflows:tdd-cycle Implement shopping cart with discount calculations
+
+# Or use individual TDD steps for more control
+/tools:tdd-red Write tests for shopping cart discount logic
+/tools:tdd-green Implement minimal code for discount calculations
+/tools:tdd-refactor Optimize discount calculation algorithm
+```
+
+#### TDD for Complex Features
+```bash
+# Start with TDD workflow
+/workflows:tdd-cycle Implement payment processing with Stripe
+
+# Add security validation
+/tools:security-scan Focus on payment handling code
+
+# Optimize performance
+/tools:performance-optimize Payment processing bottlenecks
 ```
 
 ### Command Chaining
@@ -246,12 +280,14 @@ Commands are designed to work together in sequences:
 1. Let Claude Code suggest commands automatically based on context
 2. Start with workflows for complex tasks, then refine with tools
 3. Chain commands strategically for comprehensive solutions
+4. Consider TDD workflow for features requiring robust test coverage
 
 ### Effective Usage
 1. Provide comprehensive context including tech stack and constraints
 2. Use workflow output as input for specific tools
 3. Build incrementally on previous command outputs
 4. Allow workflows to complete before applying modifications
+5. For TDD: Start with `/workflows:tdd-cycle` for complete features, use individual TDD tools for granular control
 
 ### Performance Optimization
 1. Use tools for known, specific problems
@@ -298,6 +334,23 @@ To add new commands:
 - Check command sequencing and dependencies
 
 ## Featured Commands
+
+### Test-Driven Development
+
+#### tdd-cycle (Workflow)
+Complete TDD workflow orchestration:
+- Guides through red-green-refactor cycles
+- Coordinates test writing, implementation, and refactoring
+- Ensures test coverage before implementation
+- Maintains code quality through iterative improvement
+
+#### tdd-red, tdd-green, tdd-refactor (Tools)
+Individual TDD phase tools:
+- **tdd-red**: Write comprehensive failing tests first
+- **tdd-green**: Implement minimal code to pass tests
+- **tdd-refactor**: Improve code while maintaining green tests
+- Support for all major testing frameworks
+- Language-agnostic approach
 
 ### Security & DevOps Excellence
 
