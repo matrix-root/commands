@@ -1,5 +1,5 @@
 ---
-model: opus
+model: claude-opus-4-1-20250805
 ---
 
 Respond to production incidents with coordinated agent expertise for rapid resolution:
